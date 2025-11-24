@@ -1,0 +1,12 @@
+run = "javac -d out src/**/*.java && java -cp out:lib/* view.Agendaview"
+language = "java"
+entrypoint = "view.Agendaview"
+
+[nix]
+channel = "stable-22.11"
+
+[deployment]
+run = [ "java", "-cp", "out:lib/*", "view.AgendaView" ]
+
+[vm]
+vnc = true
